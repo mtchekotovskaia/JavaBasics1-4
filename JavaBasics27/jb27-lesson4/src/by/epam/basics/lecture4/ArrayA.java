@@ -8,20 +8,22 @@ public class ArrayA {
 	  public static void main(String[] args) { 
 	  int K, sum;
 	  int[] A = new int[10];
-	  enterArrayFromConsole(A);
+	  enterArrayWithRandom(A);
 	  K = readKFromConsole();
 	  sum = calcSum(A, K);
 	  printResult(sum);
 	  }
 	  
-	  public static void enterArrayFromConsole(int[] A) { 
-		    Scanner sc = new Scanner(System.in); 
+	  public static void enterArrayWithRandom(int[] A) { 
+		    Random rand = new Random(); 
 		    for (int i = 0; i < A.length; i++) { 
-		      System.out.print("ar[" + i + "]=>"); 
-		      A[i] = sc.nextInt(); 
-		      } 
+		      A[i] = rand.nextInt(400); 
+		    } 
+		    System.out.println(); 
+ 		    for (int i=0; i<A.length; i++){ 
+		      System.out.println (">arr[" + i + "]=" + A[i]); 
+		  } 
 	  }
-	  
 	  public static int readKFromConsole(){ 
 		    Scanner sc = new Scanner(System.in); 
 		    int K = 0; 
