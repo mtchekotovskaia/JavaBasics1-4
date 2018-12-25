@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Sequence {
 	public static void main(String[] args) { 
-		int m = 1;
+		int m = 0;
 		int[]masA = new int[12];
 		enterArrayWithRandom(masA);
 		printArray(masA);
@@ -27,7 +27,7 @@ public class Sequence {
 	  public static void calcA(int[] masA, int m){
 			for(int i = 0, j = 1; i<masA.length-1; i++, j++){if(masA[i]>masA[j]){ m++; }
 			}
-			if(m==masA.length){ System.out.println("Последовательность возрастающая"); }
-			if(m<((masA.length)-1)){ System.out.println("Последовательность не возрастающая"); }
+			if(m==masA.length-1){ System.out.println("Последовательность возрастающая"); }
+			if(m<masA.length-1){ System.out.println("Последовательность не возрастающая"); }
 		}
 	}
