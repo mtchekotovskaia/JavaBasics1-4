@@ -9,6 +9,7 @@ public class ArrayA {
 	  int K, sum;
 	  int[] A = new int[10];
 	  enterArrayWithRandom(A);
+	  printArray(A);
 	  K = readKFromConsole();
 	  sum = calcSum(A, K);
 	  printResult(sum);
@@ -19,11 +20,15 @@ public class ArrayA {
 		    for (int i = 0; i < A.length; i++) { 
 		      A[i] = rand.nextInt(400); 
 		    } 
-		    System.out.println(); 
- 		    for (int i=0; i<A.length; i++){ 
+		    
+	  }
+	  public static void printArray(int[] A){ 
+		  System.out.println(); 
+		    for (int i=0; i<A.length; i++){ 
 		      System.out.println (">arr[" + i + "]=" + A[i]); 
 		  } 
-	  }
+	} 
+	  
 	  public static int readKFromConsole(){ 
 		    Scanner sc = new Scanner(System.in); 
 		    int K = 0; 
